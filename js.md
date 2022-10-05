@@ -319,7 +319,7 @@ var 키워드로 선언된 변수는 다음과 같은 특징이 있다.
 2. 함수 레벨 스코프
 3. 변수 호이스팅
 
-<details>
+
 <summary>① 변수 중복 선언 허용</summary>
 
 var 키워드로 선언된 변수는 같은 스코프 내에서 중복 선언이 허용되는데, 이는 의도치 않게 변수값이 재할당되어 변경되는 부작용을 발생시킨다.
@@ -335,9 +335,8 @@ function foo() {
 foo();
 ```
 
-</details>
 
-<details>
+
 <summary>② 함수 레벨 스코프</summary>
 
 대부분의 프로그래밍 언어는 함수 몸체만이 아니라 모든 코드 블록(if, for, while, try/catch 등)이 지역 스코프를 만든다. 이러한 특성을 **블록 레벨 스코프**라 한다. 하지만 var 키워드로 선언된 변수는 오로지 함수의 코드 블록(함수 몸체)만을 지역 스코프로 인정한다. 이러한 특성을 **함수 레벨 스코프**라 한다.
@@ -370,9 +369,8 @@ for (var i = 0; i < 5; i++) {
 console.log(i); // 5
 ```
 
-</details>
 
-<details>
+
 <summary>③ 변수 호이스팅</summary>
 
 var 키워드로 선언된 변수는 선언과 동시에 undefined로 초기화되며, 런타임 즉 소스코드 평가 단계에서 스코프에 등록되기 때문에 실행 단계에서 실제 값이 할당되지 않더라도 undefined를 가지고있다. 이를 변수 호이스팅이라 한다.
@@ -383,7 +381,6 @@ console.log(score); // undefined;
 var score; // 변수 선언문
 ```
 
-</details>
 
 <br/>
 
@@ -580,14 +577,13 @@ var observable$ = fromEvent(document, "click"); // RxJS 옵저버블
 | 원시 타입 |     BigInt 타입     | 길이의 제약 없이 정수를 다룰 수 있게 해주는 숫자형  |
 | 객체 타입 |                     |                 객체, 함수, 배열 등                 |
 
-<details>
+
 <summary>BigInt 타입 레퍼런스</summary>
 
 - [MDN: 원시 값](https://developer.mozilla.org/ko/docs/Glossary/Primitive)
 - [MDN: BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - [javascript tutorial](https://www.javascripttutorial.net/javascript-data-types/)
 
-</details>
 
 <br/>
 
@@ -694,7 +690,6 @@ console.log(typeof x, x); // number 10
 2. Object.prototype.toString 메서드를 사용하는 방법
 3. 문자열 연결 연산자를 이용하는 방법
 
-<details>
 
 ```js
 // 1. String 생성자 함수를 new 연산자 없이 호출하는 방법
@@ -707,7 +702,6 @@ String(1); // -> "1"
 1 + ""; // -> "1"
 ```
 
-</details>
 
 숫자 타입이 아닌 값을 숫자 타입으로 변환하는 방법
 
@@ -716,7 +710,7 @@ String(1); // -> "1"
 3. `+` 단항 산술 연산자를 이용하는 방법
 4. `*` 산술 연산자를 이용하는 방법
 
-<details>
+
 
 ```js
 // 1. Number 생성자 함수를 new 연산자 없이 호출하는 방법
@@ -732,14 +726,13 @@ parseInt("0"); // -> 0
 "0" * 1; // -> 0
 ```
 
-</details>
 
 불리언 타입이 아닌 값을 불리언 타입으로 변환하는 방법
 
 1. Boolean 생성자 함수를 new 연산자 없이 호출하는 방법
 2. ! 부정 논리 연산자를 두번 사용하는 방법
 
-<details>
+
 
 ```js
 // 1. Boolean 생성자 함수를 new 연산자 없이 호출하는 방법
@@ -779,7 +772,6 @@ Boolean([]); // -> true
 !![]; // -> true
 ```
 
-</details>
 
 <br/>
 
@@ -1368,7 +1360,6 @@ console.log(decreaser()); // -2
 3. 상속 (Inheritance)
 4. 다형성 (Polymorphism)
 
-<details>
 
 <b>① 추상화</b>
 
@@ -1389,7 +1380,7 @@ console.log(decreaser()); // -2
 
 - 부모클레스에서 물려받은 가상 함수를 자식 클래스 내에서 오버라이딩 되어 사용되는 것
 
-</details>
+
 
 ### 자바스크립트는 객체지향 프로그래밍 언어인가요?
 
@@ -1435,7 +1426,6 @@ strict mode는 자바스크립트 언어의 문법을 좀 더 엄격히 적용�
 2. 호스트 객체
 3. 사용자 정의 객체
 
-<details>
 
 <b>① 표준 빌트인 객체</b>
 
@@ -1452,7 +1442,6 @@ strict mode는 자바스크립트 언어의 문법을 좀 더 엄격히 적용�
 
 - 사용자 정의 객체는 표준 빌트인 객체와 호스트 객체처럼 기본 제공되는 객체가 아닌 사용자가 직접 정의한 객체를 말한다.
 
-</details>
 
 <br/>
 
@@ -1517,26 +1506,26 @@ this 바인딩은 this(키워드로 분류되지만 식별자 역할을 한다)�
 
 즉, **②렉시컬 환경은** 스코프를 구분하여 식별자를 등록하고 관리하는 저장소 역할을 하는 렉시컬 스코프의 실체다.
 
-<details>
+
 <summary>실행 컨텍스트 구조 한눈에 보기</summary>
 
 <img src="./images/28.jpg" alt="실행 컨텍스트 구조">
 
-</details>
 
-<details>
+
+
 <summary>전역 실행 컨텍스트에 바인딩된 전역 렉시컬 환경</summary>
 
 <img src="./images/29_1.jpg" alt="전역 실행 컨텍스트에 바인딩된 전역 렉시컬 환경">
 
-</details>
 
-<details>
+
+
 <summary>함수 실행 컨텍스트에 바인딩된 함수 렉시컬 환경</summary>
 
 <img src="./images/29_2.jpg" alt="함수 실행 컨텍스트에 바인딩된 함수 렉시컬 환경">
 
-</details>
+
 
 ## 클로저
 
@@ -1581,7 +1570,7 @@ callFunc();
 
 이처럼 외부 함수 호출이 종료되더라도 외부 함수의 지역 변수 및 변수 스코프 객체의 체인 관계를 유지할 수 있는 구조를 `클로저` 라고 한다.
 
-<details>
+
 <summary>여러 케이스 보기</summary>
 
 <br/>
@@ -1709,11 +1698,10 @@ callFunc();
 
 클로저는 중첩 함수가 상위 스코프의 식별자를 참조하고 있고 중첩 함수가 외부 함수보다 더 오래 유지되는 경우에 한정하는 것이 일반적이다.
 
-</details>
 
 <br/>
 
-<details>
+
 <summary>함수형 프로그래밍에서의 클로저 사용하기</summary>
 
 <br/>
@@ -1793,7 +1781,6 @@ newNum.printNum(); // 100 출력
 
 ```
 
-</details>
 
 ## 클래스
 
@@ -2153,7 +2140,6 @@ console.log(...{ a: 1, b: 2 });
 
 3. 객체 리터럴 내부에서 사용하는 경우
 
-<details>
 
 <b>① 함수 호출문의 인수 목록에서 사용하는 경우</b>
 
@@ -2199,7 +2185,7 @@ const merged = { x: 1, y: 2, ...{ a: 3, b: 4 } };
 console.log(merged); // { x: 1, y: 2, a: 3, b: 4 }
 ```
 
-</details>
+
 
 ## 구조 분해 할당
 
@@ -2216,7 +2202,6 @@ console.log(merged); // { x: 1, y: 2, a: 3, b: 4 }
 1. 배열 구조분해 할당
 2. 객체 구조분해 할당
 
-<details>
 
 <b>① 배열 구조분해 할당</b>
 
@@ -2341,7 +2326,7 @@ const {
 console.log(city); // Anyang
 ```
 
-</details>
+
 
 ## 브라우저 렌더링 과정
 
@@ -2399,7 +2384,7 @@ console.log(city); // Anyang
 - 만약 자바스크립트 코드에 DOM이나 CSSOM을 변경하는 DOM API가 사용된 경우 DOM이나 CSSOM이 변경된다.
 - 이때 변경된 DOM과 CSSOM은 다시 렌더 트리로 결합되고 변경된 렌더 트리를 기반으로 레이아웃과 페인트 과정을 거쳐 브라우저의 화면에 다시 렌더링한다. 이를 리플로우(reflow), 리페인트(repaint)라 한다.
 
-<details>
+
 <summary>📚 단어 정리</summary>
 
 <br/>
@@ -2424,13 +2409,13 @@ HTTP 요청 대상을 "리소스"라고 부르는데, 그에 대한 본질을 �
 
 DNS (Domain Name System)는 인터넷에 연결된 리소스를 위한 계층적이고 분산된 명명 시스템입니다. DNS는 도메인 이름 목록 과 연결된 리소스(예: IP 주소)를 유지 관리 합니다.
 
-</details>
+
 
 ### `<script></script>` 태그를 `<body></body>` 태그 밑에 둬야하는 이유가 있을까요?
 
 DOM 요소를 조작하는 `<script>` 태그가 `<body>` 태그 위에 존재한다고 생각해보자
 
-<details>
+
 
 ```html
 <!DOCTYPE html>
@@ -2453,7 +2438,7 @@ DOM 요소를 조작하는 `<script>` 태그가 `<body>` 태그 위에 존재한
 </html>
 ```
 
-</details>
+
 
 자바스크립트 엔진은 위에서부터 아래로 차례대로 (직렬적으로) 코드를 실행한다. `<script>` 태그가 body 태그보다 위에 생성되어 있는데, 해당 스크립트 내부의 코드를 보면 바디 태그에 포함된 요소인 apple을 동적으로 스타일링을 추가하는 코드이다. **위 코드는 에러가 발생할 것이다.**
 
@@ -2463,7 +2448,7 @@ DOM 요소를 조작하는 `<script>` 태그가 `<body>` 태그 위에 존재한
 
 `① async ② defer` 어트리뷰트는 다음과 같이 src 어트리뷰트를 통해 외부 자바스크립트 파일을 로드하는 경우에만 사용할 수 있다. 위 코드처럼 `<script>` 태그 내부에 코드를 작성하는 경우에는 사용할 수 없다.
 
-<details>
+
 <summary>async/ defer</summary>
 
 `async 어트리뷰트`
@@ -2480,7 +2465,7 @@ async 어트리뷰트와 마찬가지로 HTML 파싱과 외부 자바스크립�
 
 <img src="https://github.com/junh0328/upgrade_javascript/blob/master/DEEPDIVE/images/35_11.JPG" alt="defer"/>
 
-</details>
+
 
 ## DOM
 
@@ -2503,7 +2488,7 @@ DOM은 노드 객체의 계층적인 구조로 구성된다. 노드 객체는 �
 3. 어트리뷰트 노드
 4. 텍스트 노드
 
-<details>
+
 
 <br/>
 
@@ -2556,7 +2541,7 @@ ORANGE
 
 텍스트 노드는 HTML 요소와 텍스트를 가리키는 객체다. 요소 노드가 문서의 구조를 표현한다면 텍스트 노드는 문서의 정보를 표현한다고 할 수 있다.
 
-</details>
+
 
 ## 이벤트
 
@@ -2580,7 +2565,6 @@ ORANGE
 
 ### 그 외에 알고 있는 대표적인 이벤트가 있나요?
 
-<details>
 
 ### 키보드 이벤트
 
@@ -2635,7 +2619,7 @@ ORANGE
 | abort       | 리소스 로딩이 중단되었을 때                                |
 | error       | 리소스 로딩이 실패했을 때                                  |
 
-</details>
+
 
 ### 이벤트 핸들러를 등록하는 방식에는 어떤 것들이 있나요?
 
@@ -2708,12 +2692,12 @@ DOM 트리상에 존재하는 모든 DOM 요소 노드에서 발생한 이벤트
 - 타깃 단계 : 이벤트가 이벤트 타깃에 도달
 - 버블링 단계: 이벤트가 하위 요소에서 상위 요소 방향으로 전파
 
-<details>
+
 <summary>3단계 이미지 보기</summary>
 
 <img src="./images/37_6.jpg" alt="이벤트 전파 3단계"/>
 
-</details>
+
 
 **브라우저는 기본적으로 이벤트 버블링 단계에서 이벤트를 캐치합니다.**
 
@@ -2774,7 +2758,7 @@ DIV
 
 **연속되는 태그에 대해서 공통적으로 이벤트를 줘야할 때 우리가 이벤트 핸들러를 바인딩할 해당 요소의 부모 요소에게 이를 위임하여 이벤트를 진행하는 것** 을 이벤트 위임 (event delegation) 이라 합니다.
 
-<details>
+
 
 <summary>예제 코드 보기</summary>
 
@@ -2825,13 +2809,13 @@ DIV
 
 하지만 이벤트 위임(event delegation) 을 통해 부모 요소에 이 작업을 위임하여 현재 클릭하는 타깃 (e.target)에 대한 값을 출력할 수 있습니다.
 
-</details>
+
 
 ### e.preventDefault 에 대해 알고 있나요?
 
 e.preventDefault 메서드는 요소 태그의 기본 동작을 중단합니다.
 
-<details>
+
 <summary>예제 코드 보기</summary>
 
 ```html
@@ -2855,7 +2839,7 @@ e.preventDefault 메서드는 요소 태그의 기본 동작을 중단합니다.
 </html>
 ```
 
-</details>
+
 
 ### e.stopPropagation
 
@@ -2863,7 +2847,7 @@ e.stopPropagation 메서드는 이벤트 전파를 중지시키는 메서드입�
 
 이벤트 객체의 경우 상위 태그에도 같은 이벤트가 존재한다면 (예를 들면 click 어트리뷰트가 두 요소 모두 존재하는 경우) 상위 태그의 해당 콜백 함수를 호출하는 특징이 있습니다.
 
-<details>
+
 <summary> 예제 코드 보기 </summary>
 
 <br/>
@@ -2916,7 +2900,6 @@ e.stopPropagation 메서드는 이벤트 전파를 중지시키는 메서드입�
 </html>
 ```
 
-</details>
 
 ## 타이머
 
@@ -2946,7 +2929,7 @@ console.log(add(2, 5)); >>> 7;
 
 setTimeout 함수로 생성한 타이머는 한 번 동작합니다.
 
-<details>
+
 
 <br/>
 
@@ -2960,7 +2943,6 @@ const timeoutdId = setTimeout(func|code[, delay, param1, param2, ...]);
 | delay               | 타이머 만료 시간(밀리초(ms) 단위), setTimeout 함수는 delay 시간으로 단 한 번 동작하는 타이머를 생성한다. <br/> 인수 전달을 생략한 경우 기본 값 0이 지정된다. |
 | param1, param2, ... | 호출 스케줄링된 콜백 함수에 전달해야 할 인수가 존재하는 경우 세 번째 이후의 인수로 전달할 수 있다.                                                           |
 
-</details>
 
 setTimeout 함수는 생성된 타이머를 식별할 수 있는 고유한 타이머를 식별할 수 있는 고유한 id를 반환한다.
 
@@ -2990,7 +2972,6 @@ clearTimeout(timerId);
 
 setInterval 함수는 두 번째 인수로 전달받은 시간(ms, 1/1000초)으로 반복 동작하는 타이머를 생성한다.
 
-<details>
 
 <br/>
 
@@ -2999,7 +2980,6 @@ const timeoutdId = setInterval(func|code[, delay, param1, param2, ...]);
 
 ```
 
-</details>
 
 setInterval의 첫 번째 인수인 콜백 함수는 두 번째 인수로 전달받은 시간이 경과할 때마다 반복 실행되도록 호출 스케줄링된다.
 
@@ -3035,7 +3015,6 @@ scroll, resize, mousemove 같은 이벤트는 짧은 시간 간격으로 연속�
 
 텍스트 입력 필드에서 input 이벤트가 짧은 시간 간격으로 연속해서 발생하는 경우, 디바운스를 통해 Ajax와 같은 요청의 빈도를 줄여 서버에 부하를 줄일 수 있다.
 
-<details>
 
 ```html
 <!DOCTYPE html>
@@ -3076,7 +3055,6 @@ scroll, resize, mousemove 같은 이벤트는 짧은 시간 간격으로 연속�
 
 검색 창에서 매 클릭 이벤트 (e.target.value) 마다 ajax 요청을 보내는 것보다 디바운스를 통해 일정 기간을 바탕으로 마지막 이벤트에 대한 ajax 요청을 보내는 것이 서버의 부하를 줄이는 데 더욱 효율적일 것이다.
 
-</details>
 
 ### 쓰로틀에 대해서 알고 있나요?
 
@@ -3090,7 +3068,6 @@ scroll 이벤트는 사용자가 스크롤할 때 짧은 시간 간격으로 연
 
 쓰로틀은 scroll 이벤트 처리나 무한 스크롤 UI 구현 등에 유용하게 사용된다
 
-<details>
 
 ```html
 <!DOCTYPE html>
@@ -3169,13 +3146,12 @@ scroll 이벤트는 사용자가 스크롤할 때 짧은 시간 간격으로 연
 
 <img src="./images/throttle2.gif" alt="throttle">
 
-</details>
 
 ## 비동기 프로그래밍
 
 ### 동기와 비동기의 차이점에 대해서 설명해줄 수 있나요?
 
-<details>
+
 
 자바스크립트 엔진은 기본적으로 함수를 호출하면 함수 코드가 평가되어 함수 실행 컨텍스트가 생성된다.
 
@@ -3290,7 +3266,7 @@ setTimeout 함수는 앞서 살펴본 sleep 함수와 유사하게 일정 시간
 
 하지만 동시에 **태스크의 실행 순서가 보장되지 않는 단점이 있다.**
 
-</details>
+
 
 #### 한줄 요약
 
@@ -3310,7 +3286,7 @@ setTimeout 함수는 앞서 살펴본 sleep 함수와 유사하게 일정 시간
 
 <img src="./images/39_6.jpg" alt="브라우저의 환경">
 
-<details>
+
 
 구글의 v8 자바스크립트 엔진을 비롯한 대부분의 자바스크립트 엔진은 크게 2개의 영역으로 구분할 수 있다.
 
@@ -3354,7 +3330,6 @@ setTimeout 함수는 앞서 살펴본 sleep 함수와 유사하게 일정 시간
 - 만약 콜 스택이 비어 있고 태스크 큐에 대기 중인 함수가 있다면 이벤트 루프는 순차적(FIFO)으로 태스크 큐에 대기 중인 함수를 콜 스택으로 이동시킨다
 - 이때 콜 스택으로 이동한 함수는 실행된다. 즉, 태스크 큐에 일시 보관된 함수들을 비동기 처리 방식으로 동작한다
 
-</details>
 
 ### 다음과 같은 코드에서 이벤트 루프와 태스크 큐가 어떻게 동작하는지 설명해볼 수 있나요?
 
@@ -3418,7 +3393,6 @@ Promise.resolve()
 
 프로미스의 후속 처리 메서드의 콜백 함수는 **태스크 큐** 가 아니라 **마이크로태스크 큐** 에 저장되기 때문이다.
 
-<details>
 <summary>gif로 이벤트 흐름 파악하기</summary>
 
 <br/>
@@ -3435,7 +3409,6 @@ Promise.resolve()
 
 <img src="./images/micro5.gif" alt="마이크로태스크큐">
 
-</details>
 
 ### 태스크 큐와 마이크로태스크 큐 중 어떤 것이 먼저 실행되나요?
 
@@ -3505,7 +3478,6 @@ JSON은 클라이언트와 서버 간의 HTTP 통신을 위한 텍스트 데이�
 
 1. [XMLHttpRequest](https://github.com/junh0328/upgrade_javascript/blob/master/DEEPDIVE/readme7.md#433-xmlhttprequest)
 
-<details>
 
 <br/>
 
@@ -3573,11 +3545,9 @@ xhr.onload = () => {
 };
 ```
 
-</details>
 
 2. [Fetch](https://github.com/junh0328/upgrade_javascript/blob/master/DEEPDIVE/readme7.md#458-fetch)
 
-<details>
 
 <br/>
 
@@ -3704,7 +3674,6 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
 </html>
 ```
 
-</details>
 
 ### XMLHttpRequest와 fetch 메서드의 차이는 무엇이라고 생각하시나요?
 
@@ -3774,7 +3743,6 @@ GET /todos/1
 | PATCH            | modify         | 리소스 일부 수정      | o        |
 | DELETE           | delete         | 모든/특정 리소스 삭제 | x        |
 
-<details>
 <summary>CRUD 예제 코드 보기</summary>
 
 #### GET 요청 (전체)
@@ -3928,7 +3896,6 @@ GET /todos/1
 </html>
 ```
 
-</details>
 
 <br/>
 
@@ -4043,7 +4010,6 @@ Promise 생성자 함수가 인수로 전달받은 콜백 함수 내부에서 �
 - Promise.race
 - Promise.allSettled
 
-<details>
 
 **① Promise.resolve/ Promise.reject**
 
@@ -4159,7 +4125,6 @@ Promise.allSettled([
 */
 ```
 
-</details>
 
 ## 제너레이터와 async await
 
@@ -4196,7 +4161,6 @@ next 메서드를 통해 제너레이터를 실행할 경우, 코드 블록 내�
 { value : , done : }
 ```
 
-<details>
 <summary>코드 보기 📌</summary>
 
 <br/>
@@ -4222,7 +4186,6 @@ console.log(generator.next()); // {value: 3, done: false}
 console.log(generator.next()); // {value: undefined, done: true}
 ```
 
-</details>
 
 <br/>
 
@@ -4236,7 +4199,6 @@ async/await는 `프로미스를 기반으로 동작`하기 때문에 **프로미
 
 🔥 **다시 말해, 프로미스의 후속 처리 메서드 없이 마치 동기 처리처럼 프로미스가 처리 결과를 반환하도록 구현할 수 있다.**
 
-<details>
 <summary>코드 보기 📌</summary>
 
 #### `async 함수`
@@ -4272,7 +4234,6 @@ await 키워드는 반드시 프로미스 앞에서 사용해야 한다.
 </body>
 ```
 
-</details>
 
 async await로 구현할 경우 제너레이터의 성질을 갖기 때문에 항상 프로미스가 settled(이행된) 상태가 될 때까지 대기한다.
 
@@ -4334,7 +4295,6 @@ foo(); // 약 3초 소요된다.
 
 따라서 try catch 문 등을 사용해 발생한 에러를 적절하게 대응하면 프로그래밍이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.
 
-<details>
 <summary>에러 캐치</summary>
 
 #### 에러를 처리를 하지 않을 경우
@@ -4389,7 +4349,6 @@ console.log("[End]");
 [End]
 ```
 
-</details>
 
 ### `자바스크립트에서 에러를 처리하는 방법에는 뭐가 있을까요?`
 
