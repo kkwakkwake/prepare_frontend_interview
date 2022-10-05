@@ -4397,7 +4397,7 @@ console.log("[End]");
 2. Error 객체
 3. throw 문
 
-<details>
+
 <summary>Error 객체</summary>
 
 <br/>
@@ -4424,12 +4424,12 @@ const error = new Error("invalid");
 | URIError       | encodeURI 또는 decodeURI 함수에 부적절한 인수를 전달했을 때 발생하는 에러 객체 |
 | EvalError      | eval 함수에서 발생하는 에러 객체                                               |
 
-</details>
 
-<details>
+
+
 <summary>throw 문</summary>
 
-<br/>
+
 
 Error 생성자 함수로 에러 객체를 생성한다고 에러가 발생하는 것은 아니다.
 
@@ -4459,7 +4459,7 @@ try {
 }
 ```
 
-</details>
+
 
 ## 모듈
 
